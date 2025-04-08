@@ -1,38 +1,20 @@
 ---
-title: "✨ 我的部落格打造過程與 Netlify 部署心得"
-date: 2025-04-08T20:00:00+08:00
+title: "✨部落格打造過程與 Netlify 部署心得"
+date: 2025-04-07T15:00:00+08:00
 draft: false
-tags: ["Hugo", "PaperMod", "Netlify", "Blog 部署"]
-categories: ["技術心得"]
 cover:
   image: "/images/posts/2025-04-08-deploy.png"
-  alt: "部落格部署封面"
+  alt: "封面圖"
   responsive: true
+url: "/posts/2025-04-08/hugo-paper-deploy/"
+categories: ["Hugo 教學"]
+tags: ["Hugo", "PaperMod", "靜態網站"]
+
 ---
 
 最近完成了自己的部落格建置，這篇紀錄一下整個調整、踩坑、優化與部署的過程！
 
 <!--more-->
-
----
-
-## 🚀 為什麼選擇 Hugo + PaperMod？
-
-- 極致輕量又漂亮（真的）
-- Markdown 撰寫好維護
-- 社群活躍，PaperMod 功能齊全（支援封面圖、TOC、Lightbox、社群卡、Mermaid）
-
----
-
-## 🧰 自訂與優化內容整理
-
-✅ 首頁使用 `profileMode` 精簡呈現  
-✅ 自訂主題色、字型大小  
-✅ 支援文章封面圖比例統一（3:2、1536x1024）  
-✅ 新增 TOC 預設展開、字數顯示、閱讀時間  
-✅ About 頁面製作雙欄式 Resume，結合技術卡片與 CSS 樣式  
-✅ 部落格列表 hover 動畫與 icon 加強  
-✅ 社群預覽卡 / 分享連結（部份還在調整）
 
 ---
 
