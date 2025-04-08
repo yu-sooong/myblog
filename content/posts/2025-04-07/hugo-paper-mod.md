@@ -3,7 +3,7 @@ title: "使用 Hugo + PaperMod 建立個人部落格教學"
 date: 2025-04-07T15:00:00+08:00
 draft: false
 cover:
-  image: "/images/posts/posts.png"
+  image: "/images/posts/posts.webp"
   alt: "封面圖"
   responsive: true
 url: "/posts/2025-04-07/hugo-paper-mod/"

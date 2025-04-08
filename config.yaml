@@ -14,7 +14,7 @@ params:
   env: production  # 很重要！會啟用完整 meta tag
   title: "543T"
   images:
-    - "/images/home.png"
+    - "/images/home.webp"
 
   description: "3T 的技術與生活紀錄部落格"
   defaultTheme: dark
@@ -42,7 +42,7 @@ params:
       📦 專案開發與後端架構  
       🚀 求職攻略與系統分析心得  
       ✍️ 分享生活觀察與學習歷程
-    imageUrl: "/images/3t.png" # optional
+    imageUrl: "/images/3t.webp" # optional
     imageTitle: "3T 的頭像" # optional
     imageWidth: 200 # custom size
     imageHeight: 200 # custom size

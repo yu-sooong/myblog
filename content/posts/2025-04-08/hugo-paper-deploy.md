@@ -3,7 +3,7 @@ title: "✨部落格打造過程與 Netlify 部署心得"
 date: 2025-04-07T15:00:00+08:00
 draft: false
 cover:
-  image: "/images/posts/2025-04-08-deploy.png"
+  image: "/images/posts/2025-04-08-deploy.webp"
   alt: "封面圖"
   responsive: true
 url: "/posts/2025-04-08/hugo-paper-deploy/"
