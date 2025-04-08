@@ -8,7 +8,16 @@ markup:
     renderer:
       unsafe: true
 
+minify:
+  disableXML: true
+  minifyOutput: true
+
 params:
+  assets:
+    favicon: "favicon.svg"
+    customCSS:
+      - css/extended/extra.css
+  imageLazyLoading: true
   cover:
     responsive: true
   env: production  # 很重要！會啟用完整 meta tag
@@ -32,7 +41,8 @@ params:
   TocOpen: true          # 預設展開目錄（可改為 false）
   Comments: true
 
-  mainSections: []
+  mainSections:
+    - posts
 
   profileMode:
     enabled: true
@@ -53,9 +63,6 @@ params:
     - name: email
       url: "mailto:ssocde543@gmail.com"
 
-  assets:
-    css:
-      - "css/extra.css"
 menu:
   main:
     - identifier: blog

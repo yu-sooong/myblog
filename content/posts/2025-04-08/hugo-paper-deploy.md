@@ -9,7 +9,6 @@ cover:
 url: "/posts/2025-04-08/hugo-paper-deploy/"
 categories: ["Hugo 教學"]
 tags: ["Hugo", "PaperMod", "靜態網站"]
-
 ---
 
 最近完成了自己的部落格建置，這篇紀錄一下整個調整、踩坑、優化與部署的過程！

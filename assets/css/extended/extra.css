@@ -1,0 +1,43 @@
+/* ✅ 卡片整體優化（視覺層次、細緻陰影、動畫更滑順） */
+.post-entry {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+    border-radius: 12px; /* 圓角微調，增加細緻感 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* 預設陰影，增加層次感 */
+    overflow: hidden; /* 內部內容避免溢出 */
+}
+
+.post-entry:hover {
+    transform: translateY(-8px) scale(1.03); /* 略增加提升感 */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12), 0 10px 10px rgba(0, 0, 0, 0.06); /* 更細緻陰影效果 */
+    background-color: rgba(255, 255, 255, 0.08); /* hover背景輕微提亮 */
+}
+
+/* ✅ 卡片內圖片 hover 細節加強 */
+.post-entry .entry-cover img,
+.post-entry .article-image img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+    transform-origin: center;
+}
+
+.post-entry:hover .entry-cover img,
+.post-entry:hover .article-image img {
+    transform: scale(1.08); /* 圖片放大更明顯 */
+    filter: brightness(1.05) contrast(1.05); /* 圖片稍亮、增加對比提升質感 */
+}
+
+/* ✅ 響應式（RWD）微調，確保行動裝置體驗順暢自然 */
+@media (max-width: 768px) {
+    .post-entry {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .post-entry:hover {
+        transform: translateY(-4px) scale(1.01); /* 手機上降低效果，避免過於誇張 */
+        box-shadow: 0 6px 14px rgba(0,0,0,0.1); /* 陰影簡化 */
+    }
+
+    .post-entry:hover .entry-cover img,
+    .post-entry:hover .article-image img {
+        transform: scale(1.04); /* 手機圖片放大稍微降低 */
+    }
+}

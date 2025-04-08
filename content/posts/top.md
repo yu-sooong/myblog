@@ -4,7 +4,7 @@ date: 2025-04-01T12:00:00+08:00
 weight: 1  # ✅ 置頂用的設定
 draft: false
 cover:
-  image: "/images/home.png"
+  image: "/images/home.webp"
   alt: "歡迎封面"
   responsive: true
 categories: ["置頂", "導覽"]
