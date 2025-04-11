@@ -1,0 +1,65 @@
+{{ define "main" }}
+<main id="content" class="archive-content">
+  <div class="timeline-nav">
+    {{ range .Site.RegularPages.GroupByDate "2006" }}
+    <a href="#y{{ .Key }}">{{ .Key }}</a>
+    {{ end }}
+    <input id="searchBox" type="text" placeholder="🔍 搜尋文章…" />
+  </div>
+
+  <div id="timeline-container">
+    {{ range .Site.RegularPages.GroupByDate "2006" }}
+    <div id="y{{ .Key }}" class="archive-year sticky">{{ .Key }}</div>
+
+    {{ range .Pages.GroupByDate "January" }}
+    <div class="archive-month">{{ .Key }}</div>
+
+    {{ range .Pages }}
+    <div class="archive-entry" data-title="{{ .Title | lower }}">
+      <div class="timeline-dot"></div>
+      <div class="archive-entry-date">{{ .Date.Format "01-02" }}</div>
+      <a class="archive-entry-title emoji-title" href="{{ .RelPermalink }}">
+        {{ .Title }}
+      </a>
+    </div>
+    {{ end }}
+
+    {{ end }}
+    {{ end }}
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+  const searchInput = document.getElementById("searchBox");
+  const entries = [...document.querySelectorAll(".archive-entry")];
+  const fuse = new Fuse(entries.map(e => ({
+    el: e,
+    title: e.dataset.title
+  })), {
+    keys: ["title"],
+    threshold: 0.3
+  });
+
+  searchInput.addEventListener("input", e => {
+    const keyword = e.target.value.trim().toLowerCase();
+    entries.forEach(e => e.style.display = "block");
+    if (keyword === "") return;
+
+    const resultEls = new Set(fuse.search(keyword).map(r => r.item.el));
+    entries.forEach(e => {
+      if (!resultEls.has(e)) e.style.display = "none";
+    });
+  });
+
+  // emoji 動畫效果
+  const animatedEmoji = ['✨', '🔥', '🚀', '💡', '📅'];
+  document.querySelectorAll(".emoji-title").forEach(el => {
+    animatedEmoji.forEach(emoji => {
+      if (el.textContent.includes(emoji)) {
+        el.classList.add("emoji-highlight");
+      }
+    });
+  });
+</script>
+{{ end }}

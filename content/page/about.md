@@ -2,6 +2,9 @@
 title: "👨‍💻 關於我"
 date: 2025-04-07
 comments: false
+_build:
+  list: never
+  render: always
 ---
 
 <style>

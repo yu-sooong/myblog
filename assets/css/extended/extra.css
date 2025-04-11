@@ -41,3 +41,188 @@
         transform: scale(1.04); /* 手機圖片放大稍微降低 */
     }
 }
+
+
+nav.pagination .page {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 0.25rem;
+    padding: 0 0.75rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    background-color: #333 !important;
+    color: #eee !important;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+nav.pagination .page:hover {
+    background-color: #4b5563 !important;
+    color: #fff !important;
+    transform: scale(1.05);
+}
+
+/* ✅ 最重要：當前頁碼亮起來 */
+.pagination .page.current {
+    background-color: #3b82f6 !important; /* Tailwind primary blue */
+    color: #fff !important;
+    font-weight: bold;
+    transform: scale(1.05);
+    box-shadow: 0 0 6px rgba(59, 130, 246, 0.3);
+}
+
+
+/* ✅ Timeline 年/月 */
+.archive-year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    border-left: 4px solid var(--primary);
+    padding-left: 0.75rem;
+    background-color: var(--theme);
+    z-index: 2;
+    position: sticky;
+    top: 3.5rem;
+}
+
+.archive-month {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+}
+
+/* ✅ Timeline 列表樣式（簡約橫向） */
+.archive-entry {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    gap: 0.75rem;
+}
+
+.archive-entry-date {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: var(--tertiary);
+    min-width: 4rem;
+}
+
+.archive-entry-title {
+    font-size: 1rem;
+    color: var(--fg);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.archive-entry-title:hover {
+    color: var(--primary);
+    transform: translateX(4px);
+}
+
+/* ✅ Emoji 動畫高亮 */
+.emoji-highlight {
+    animation: pulse 1.2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* ✅ Timeline 年度快速錨點 + 搜尋欄 */
+.timeline-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem 0 2rem;
+}
+
+.timeline-nav a {
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    background-color: var(--secondary-bg); /* 亮色主題時偏白，暗色主題時偏深 */
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+}
+
+.timeline-nav a:hover {
+    background-color: var(--primary);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.timeline-nav a.active {
+    background-color: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.timeline-nav input#searchBox {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: var(--theme);
+    color: var(--fg);
+    border: 1px solid var(--border);
+}
+
+#gen-summary-btn {
+    background: linear-gradient(135deg, #ffe9c6, #ffc6c6);
+    color: white;
+    font-weight: bold;
+    font-size: 1.05rem;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    box-shadow: 0 4px 10px rgba(255, 193, 158, 0.4);
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+/* ✨ 漂亮 hover 浮動效果 */
+#gen-summary-btn {
+    background: linear-gradient(135deg, #ffeec3, #ffc9d0); /* 溫柔粉橘 + 淡粉紅 */
+    color: white;
+    font-weight: 800;
+    font-size: 1.1rem;
+    border: none;
+    padding: 0.7rem 1.6rem;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(255, 195, 160, 0.45); /* 橘色 Glow 感 */
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: floaty 2.5s ease-in-out infinite;
+}
+
+@keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+
+#gen-summary-btn:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 32px rgba(255, 180, 150, 0.55);
+}
+
+
+
